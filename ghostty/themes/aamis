@@ -1,0 +1,23 @@
+# Aamis Theme
+background = #0d0d0d
+foreground = #f0e6d8
+
+# Standard colors
+palette = 0=#0d0d0d
+palette = 1=#ff6b7a
+palette = 2=#d4a574
+palette = 3=#ffd966
+palette = 4=#e8c89a
+palette = 5=#ffe8b6
+palette = 6=#ffa500
+palette = 7=#f5d4b8
+
+# Bright colors
+palette = 8=#8b8585
+palette = 9=#ff8fa3
+palette = 10=#d4a574
+palette = 11=#ffeb5c
+palette = 12=#f0d4b8
+palette = 13=#ffe8b6
+palette = 14=#ffb84d
+palette = 15=#f0e6d8

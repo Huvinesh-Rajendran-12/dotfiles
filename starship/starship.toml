@@ -1,0 +1,65 @@
+$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$rust\
+$golang\
+$python\
+\n$character"""
+
+[directory]
+style = "fg:#ffd966"
+format = "[$path]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+fish_style_pwd_dir_length = 1
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "fg:#d4a574"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "fg:#ff6b7a"
+format = "[$all_status]($style)"
+disabled = false
+conflicted = "≠"
+ahead = "↑"
+behind = "↓"
+diverged = "⇅"
+untracked = "?"
+modified = "!"
+staged = "+"
+
+[nodejs]
+format = " [${symbol}]($style)"
+style = "fg:#ffa500"
+symbol = " "
+
+[rust]
+format = " [${symbol}]($style)"
+style = "fg:#ffa500"
+symbol = " "
+
+[golang]
+format = " [${symbol}]($style)"
+style = "fg:#ffa500"
+symbol = " "
+
+[python]
+format = " [${symbol}]($style)"
+style = "fg:#ffa500"
+symbol = " "
+
+[character]
+success_symbol = "[❯](fg:#ffa500)"
+error_symbol = "[❯](fg:#ff6b7a)"
