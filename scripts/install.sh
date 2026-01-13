@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Cross-platform dotfiles installer for macOS and Linux
-# This script sets up ghostty, starship, neovim, and opencode configurations
+# This script sets up ghostty, starship, neovim, opencode, and zsh configurations
 
 set -e
 
@@ -103,6 +103,13 @@ if [[ -f "$DOTFILES_DIR/opencode/CLAUDE.md" ]]; then
     create_symlink "$DOTFILES_DIR/opencode/CLAUDE.md" ~/.claude/CLAUDE.md
 fi
 
+# Setup Zsh
+if [[ -f "$DOTFILES_DIR/zshrc" ]]; then
+    echo -e "${BLUE}Setting up Zsh...${NC}"
+    backup_config ~/.zshrc
+    create_symlink "$DOTFILES_DIR/zshrc" ~/.zshrc
+fi
+
 echo -e "${GREEN}Installation complete!${NC}"
 echo -e "${YELLOW}Note: You may need to restart your terminal applications for changes to take effect.${NC}"
 
@@ -112,9 +119,11 @@ if [[ "$OS" == "macos" ]]; then
     echo -e "  - Ghostty: Install via Homebrew: brew install ghostty"
     echo -e "  - Starship: Install via Homebrew: brew install starship"
     echo -e "  - Neovim: Install via Homebrew: brew install neovim"
+    echo -e "  - Zsh: Install via Homebrew: brew install zsh"
 elif [[ "$OS" == "linux" ]]; then
     echo -e "${BLUE}Linux specific notes:${NC}"
     echo -e "  - Ghostty: Download from https://ghostty.org/"
     echo -e "  - Starship: Install via package manager or from https://starship.rs/"
     echo -e "  - Neovim: Install via package manager (apt, dnf, etc.)"
+    echo -e "  - Zsh: Install via package manager (apt, dnf, etc.)"
 fi

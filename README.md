@@ -23,6 +23,12 @@ A collection of configuration files for various development tools that work acro
 - Configuration for OpenCode AI assistant
 - Python workflow settings
 
+### 🐚 Zsh
+- Oh My Zsh configuration with Powerlevel10k theme
+- Custom aliases and environment variables
+- Syntax highlighting and autosuggestions
+- Integration with Starship prompt
+
 ## Installation
 
 ### Prerequisites
@@ -32,14 +38,14 @@ Make sure you have the following tools installed:
 #### macOS
 ```bash
 # Using Homebrew
-brew install ghostty starship neovim
+brew install ghostty starship neovim zsh
 ```
 
 #### Linux
 ```bash
 # Ubuntu/Debian
 sudo apt update
-sudo apt install neovim
+sudo apt install neovim zsh
 
 # Or use your preferred package manager
 ```
@@ -85,6 +91,9 @@ ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 # OpenCode
 ln -sf ~/dotfiles/opencode/package.json ~/.config/opencode/package.json
 ln -sf ~/dotfiles/opencode/CLAUDE.md ~/.claude/CLAUDE.md
+
+# Zsh
+ln -sf ~/dotfiles/zshrc ~/.zshrc
 ```
 
 ## Configuration Details
